@@ -3,6 +3,7 @@ import axios from "axios";
 import { Container } from 'reactstrap';
 import Menu from './Menu';
 import NavBar from "./NavBar";
+import Home from "./Home";
 
 class App extends Component {
   constructor() {
@@ -24,7 +25,7 @@ class App extends Component {
         { name: "Dessert", amount: 8, data: [] },
         { name: "Special", amount: 1, data: [] },
       ],
-      currentPage: 0
+      currentPage: -1
     }
 
     this.setPage = this.setPage.bind(this)
@@ -57,6 +58,15 @@ class App extends Component {
 
   setPage(newPageNum) {
     this.setState({ currentPage: newPageNum })
+  }
+
+  showPage(){
+    if (this.state.currentPage === -1){
+      return <Home />
+    }
+    else{
+      return <Menu menu={this.state.menu[this.state.currentPage]}/>
+    }
   }
 
   componentDidMount() {
@@ -100,9 +110,7 @@ class App extends Component {
         />
         <container>
 
-          <Menu
-            menu={this.state.menu[this.state.currentPage]}
-          />
+        {this.showPage()}
 
         </container>
       </>
