@@ -5,7 +5,7 @@ function NavBar(props) {
     return(
         <nav class="navbar navbar-expand-lg navbar-dark brand fixed-top">
              <div class="container">
-                 <a class="navbar-brand" onClick={() => props.setPage(-1)} href="#">Billy Bob's Gud Fud and Other Eatables</a>
+                 <a class="navbar-brand" onClick={() => props.setPage(-1)} href="#">Billy Bob's Gud Fud and Other Ateables</a>
                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                  </button>

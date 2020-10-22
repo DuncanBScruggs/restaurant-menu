@@ -10,7 +10,7 @@ class App extends Component {
     super();
 
     this.pages = [
-      { readableName: "Appatizer", url: "#" },
+      { readableName: "Appetizer", url: "#" },
       { readableName: "Entree", url: "#" },
       { readableName: "Sides", url: "#" },
       { readableName: "Dessert", url: "#" },
@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state = {
       menu: [
-        { name: "Appatizer", amount: 8, data: [] },
+        { name: "Appetizer", amount: 8, data: [] },
         { name: "Entree", amount: 15, data: [] },
         { name: "Sides", amount: 8, data: [] },
         { name: "Dessert", amount: 8, data: [] },
@@ -102,7 +102,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div class="brand-main">
         <NavBar
           pages={this.pages}
           currentPage={this.state}
@@ -113,7 +113,7 @@ class App extends Component {
         {this.showPage()}
 
         </container>
-      </>
+      </div>
     )
   }
 }
