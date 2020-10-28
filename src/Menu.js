@@ -5,7 +5,7 @@ function Menu(props) {
         let dollars = Math.floor(Math.random() * 101);
         let cents = Math.floor(Math.random() * 100);
         if (cents.toString().length == 1){
-            cents = cents.toString() + "0";
+            cents = "0" + cents.toString();
         }
         return `$${dollars}.${cents}`;
     }

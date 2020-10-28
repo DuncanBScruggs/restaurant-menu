@@ -68,6 +68,7 @@ class App extends Component {
       return <Menu menu={this.state.menu[this.state.currentPage]}/>
     }
   }
+  
 
   componentDidMount() {
     console.log("in componentDidMount")
@@ -108,11 +109,11 @@ class App extends Component {
           currentPage={this.state}
           setPage={this.setPage}
         />
-        <container mt-5>
+        <Container mt-5>
 
         {this.showPage()}
 
-        </container>
+        </Container>
       </div>
     )
   }
